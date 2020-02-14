@@ -1,22 +1,13 @@
 import React from 'react';
 
-function App() {
-
-  const frutas = [
-    'piña',
-    'mango',
-    'fresa'
-  ];
+function App(props) {
+  const {titulo, edad} = props; 
 
   return (
-    <React.Fragment>
-      <ul>
-        {frutas.map(fruta => <li id={fruta}>{fruta}</li>)}
-      </ul>
-
-
-
-    </React.Fragment>
+    <div>
+      <h1>{titulo}</h1>
+      <p>{edad}</p>
+    </div>
   );
 }
 
