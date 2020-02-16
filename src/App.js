@@ -1,15 +1,18 @@
 import React from 'react';
 import './index.css';
+import Component from './Component';
 
 function App(props) {
   const {titulo, edad} = props; 
 
   return (
-    <div className="bloque">
-      <h1>{titulo}</h1>
-      <p>{edad}</p>
-    </div>
-  );
+      <React.Fragment>
+        <Component
+          titulo = "Hola mundo" color = "#333"        
+        />
+
+      </React.Fragment>
+    );
 }
 
 export default App;
