@@ -3,17 +3,26 @@ import './index.css';
 import Component from './Component';
 
 function App(props) {
-  const {titulo, edad} = props; 
 
   return (
       <React.Fragment>
         <Component
-          titulo = "Hola mundo" color = "#333"        
+        />
+        <Component
+          color = "#333"        
+        />
+        <Component
+          titulo = "Hola mundo"        
+        />
+
+        <Component
+          items = {['test 1','test 2','test 3']}        
         />
 
       </React.Fragment>
     );
 }
+
 
 export default App;
 
