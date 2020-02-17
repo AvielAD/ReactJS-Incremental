@@ -1,28 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './index.css';
-import Component from './Component';
 
-function App(props) {
+class App extends Component{
 
-  return (
+  constructor(props){
+    super(props);
+    this.state = { 
+      clicks: props.clicks,
+      titulo: props.titulo,
+    };
+  }
+
+  render(){
+    
+    const {titulo} = this.props;
+    const {clicks} = this.state;
+
+    return (
       <React.Fragment>
-        <Component
-        />
-        <Component
-          color = "#333"        
-        />
-        <Component
-          titulo = "Hola mundo"        
-        />
-
-        <Component
-          items = {['test 1','test 2','test 3']}        
-        />
+        <h1>{titulo}</h1>
+        <span>{clicks}</span>
+        <br/>
+        <button onClick={ ()=>{
+          this.setState({clicks: clicks + 1});
+        }}>Click me</button>
 
       </React.Fragment>
     );
-}
+    
+  }
 
+}
 
 export default App;
 
