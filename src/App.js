@@ -1,28 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './index.css';
-import Component from './Component';
+import Controlado from './Controlado';
+class App extends Component{
 
-function App(props) {
+  constructor(props){
+    super(props);
+    this.state = { 
+    };
+  }
 
-  return (
+  render(){
+
+    return (
       <React.Fragment>
-        <Component
-        />
-        <Component
-          color = "#333"        
-        />
-        <Component
-          titulo = "Hola mundo"        
-        />
+          <Controlado></Controlado>
 
-        <Component
-          items = {['test 1','test 2','test 3']}        
-        />
 
       </React.Fragment>
     );
-}
+    
+  }
 
+}
 
 export default App;
 
