@@ -14,7 +14,7 @@ class App extends Component{
     return (
       <React.Fragment>
           <Controlado></Controlado>
-
+          <h1>Hola mundo en react</h1>
 
       </React.Fragment>
     );
